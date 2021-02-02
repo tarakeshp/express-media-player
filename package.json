@@ -1,0 +1,24 @@
+{
+  "name": "express-media-player",
+  "version": "1.0.0",
+  "description": "Web based media player for audio and video files",
+  "main": "index.js",
+  "scripts": {
+    "debug": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "audio",
+    "video"
+  ],
+  "author": "Tharakesh Pulikonda",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

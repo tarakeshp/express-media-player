@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <ul>
+      <% for(var i=0; i < songs.length; i++) {%>
+      <li style="cursor: pointer" data-id="<%=songs[i].id%>" class="on-song-click"><%= songs[i].name %></li>
+      <% } %>
+    </ul>
+    <audio src="" controls id="audio-player">Sorry, your browser dosn't support HTML5!</audio>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $(".on-song-click").click(async function () {
+        const player = $("#audio-player");
+        const id = $(this).data("id");
+        player.attr("src", "play/" + id);
+        player.get(0).muted = true;
+        player.get(0).play();
+      });
+    });
+  </script>
+</html>
